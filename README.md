@@ -61,10 +61,10 @@ javac -version
 ## Build and Run Instructions
 
 1. Clone the repository and move into its root folder:
-
 ```bash
-git clone https://github.com/muminamukazhan/sdpassignment2.git
-cd sdpassignment2
+   git clone https://github.com/muminamukazhan/sdpassignment2.git
+   cd sdpassignment2
+```
 
 2. Compile all source files into an `out` directory:
 ```bash
