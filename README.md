@@ -10,40 +10,33 @@ At runtime, the user selects a delivery mode and a UI platform independently. Th
 
 ## Package Structure
 
-src/
-└── com/
-├── logistics/
-│ ├── transport/
-│ │ ├── Transport.java // Product interface (Factory Method)
-│ │ ├── Truck.java // Concrete product
-│ │ └── Ship.java // Concrete product
-│ └── creator/
-│ ├── Logistics.java // Abstract creator
-│ ├── RoadLogistics.java // Concrete creator
-│ └── SeaLogistics.java // Concrete creator
-│
-├── gui/
-│ ├── component/
-│ │ ├── Button.java // Abstract product (Abstract Factory)
-│ │ ├── Checkbox.java // Abstract product
-│ │ ├── WindowsButton.java // Concrete product
-│ │ ├── WindowsCheckbox.java // Concrete product
-│ │ ├── MacOSButton.java // Concrete product
-│ │ └── MacOSCheckbox.java // Concrete product
-│ └── factory/
-│ ├── GUIFactory.java // Abstract factory
-│ ├── WindowsFactory.java // Concrete factory
-│ └── MacOSFactory.java // Concrete factory
-│
-└── app/
-├── DeliveryMode.java // Enum: ROAD, SEA
-├── UIPlatform.java // Enum: WINDOWS, MACOS
-├── InputReader.java // Reads and validates console/argument input
-├── LogisticsSelector.java // Selects concrete Logistics by mode
-├── GUIFactorySelector.java // Selects concrete GUIFactory by platform
-├── DeliveryApplication.java // Client: uses GUIFactory + Logistics via interfaces
-└── Main.java // Entry point
-
+- `src/com/logistics/transport/`
+  - `Transport.java` — product interface (Factory Method)
+  - `Truck.java` — concrete product
+  - `Ship.java` — concrete product
+- `src/com/logistics/creator/`
+  - `Logistics.java` — abstract creator
+  - `RoadLogistics.java` — concrete creator
+  - `SeaLogistics.java` — concrete creator
+- `src/com/gui/component/`
+  - `Button.java` — abstract product (Abstract Factory)
+  - `Checkbox.java` — abstract product
+  - `WindowsButton.java` — concrete product
+  - `WindowsCheckbox.java` — concrete product
+  - `MacOSButton.java` — concrete product
+  - `MacOSCheckbox.java` — concrete product
+- `src/com/gui/factory/`
+  - `GUIFactory.java` — abstract factory
+  - `WindowsFactory.java` — concrete factory
+  - `MacOSFactory.java` — concrete factory
+- `src/com/app/`
+  - `DeliveryMode.java` — enum: ROAD, SEA
+  - `UIPlatform.java` — enum: WINDOWS, MACOS
+  - `InputReader.java` — reads and validates console/argument input
+  - `LogisticsSelector.java` — selects concrete Logistics by mode
+  - `GUIFactorySelector.java` — selects concrete GUIFactory by platform
+  - `DeliveryApplication.java` — client: uses GUIFactory + Logistics via interfaces
+  - `Main.java` — entry point
 
 ## Prerequisites
 
